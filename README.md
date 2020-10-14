@@ -3,7 +3,7 @@
 ## Quickstart
 
 ```
-composer require rokde/laravel-slow-query-logger
+composer require hoannc54/laravel-query-logger
 ```
 
 Look into your `laravel.log` file to see your messy queries.
@@ -13,7 +13,7 @@ Look into your `laravel.log` file to see your messy queries.
 Add to your composer.json following lines
 
 	"require": {
-		"rokde/laravel-slow-query-logger": "^1.*"
+		"hoannc54/laravel-query-logger": "^1.*"
 	}
 
 Run `php artisan vendor:publish --provider="Workable\QueryLogger\QueryLoggerProvider"`
