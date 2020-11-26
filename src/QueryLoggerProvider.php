@@ -74,7 +74,7 @@ class QueryLoggerProvider extends ServiceProvider
                 if (config('slow-query-logger.channel', 'single') == 'database'){
                     $this->logDb($time, $sql, $url);
                 }else{
-                    Log::channel('single')->log($level, $time . '  ' . $sql . ' ' . $url);
+                    Log::channel(config('slow-query-logger.channel', 'single'))->log($level, $time . '  ' . $sql . ' ' . $url);
                 }
 			} catch (Exception $e) {
 				//  be quiet on error
